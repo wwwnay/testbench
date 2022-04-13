@@ -14,7 +14,7 @@ jobs:
         with:
           go-version: 1.17.x
       - name: Run benchmark
-        run: go mod init && go test -bench 'BenchmarkFib' | tee output.txt
+        run:  go test -bench 'BenchmarkFib' | tee output.txt
       - name: Download previous benchmark data
         uses: actions/cache@v1
         with:
