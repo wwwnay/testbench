@@ -1,16 +1,12 @@
-name: Minimal setup
+name: test
 on:
   push:
     branches:
       - master
-      
-permissions:
-  contents: write
-  deployments: write
-  
+
 jobs:
   benchmark:
-    name: Run Go benchmark example
+    name: Performance regression check
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -25,12 +21,7 @@ jobs:
       - name: Store benchmark result
         uses: benchmark-action/github-action-benchmark@v1
         with:
-          name: Go Benchmark
           tool: 'go'
           output-file-path: output.txt
           external-data-json-path: ./cache/benchmark-data.json
-          github-token: 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
-          alert-threshold: '200%'
-          comment-on-alert: true
           fail-on-alert: true
-          alert-comment-cc-users: '@wwwnay'
