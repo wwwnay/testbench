@@ -34,4 +34,3 @@ jobs:
           alert-threshold: '10%'
           comment-on-alert: true
           alert-comment-cc-users: '@wwwnay'
-          auto-push: true
