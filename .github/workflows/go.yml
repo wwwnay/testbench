@@ -30,6 +30,7 @@ jobs:
           tool: 'go'
           output-file-path: output.txt
           fail-on-alert: true
+          external-data-json-path: ./cache/benchmark-data.json
           github-token: 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
           alert-threshold: '10%'
           comment-on-alert: true
