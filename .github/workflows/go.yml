@@ -29,9 +29,9 @@ jobs:
         with:
           tool: 'go'
           output-file-path: output.txt
-          external-data-json-path: ./cache/benchmark-data.json
           fail-on-alert: true
           github-token: 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
           alert-threshold: '10%'
           comment-on-alert: true
           alert-comment-cc-users: '@wwwnay'
+          auto-push: true
