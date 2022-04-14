@@ -30,4 +30,5 @@ jobs:
           github-token: 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
           alert-threshold: '10%'
           comment-on-alert: true
+          fail-on-alert: true
           alert-comment-cc-users: '@wwwnay'
